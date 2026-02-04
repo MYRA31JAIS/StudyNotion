@@ -100,62 +100,6 @@ studynotion/
 - Razorpay account (for payments)
 - Gmail account (for OTP emails)
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/MYRA31JAIS/StudyNotion.git
-   cd StudyNotion
-   ```
-
-2. **Install dependencies**
-   ```bash
-   # Install client dependencies
-   npm install
-   
-   # Install server dependencies
-   cd server
-   npm install
-   cd ..
-   ```
-
-3. **Environment Configuration**
-   
-   Create `.env` in the root directory:
-   ```env
-   REACT_APP_BASE_URL=http://localhost:4000/api/v1
-   RAZORPAY_KEY=your_razorpay_key_id
-   ```
-   
-   Create `server/.env`:
-   ```env
-   JWT_SECRET=your_jwt_secret_key
-   MONGODB_URL=your_mongodb_atlas_connection_string
-   MAIL_HOST=smtp.gmail.com
-   MAIL_USER=your_email@gmail.com
-   MAIL_PASS=your_gmail_app_password
-   CLOUD_NAME=your_cloudinary_cloud_name
-   API_KEY=your_cloudinary_api_key
-   API_SECRET=your_cloudinary_api_secret
-   RAZORPAY_KEY=your_razorpay_key_id
-   RAZORPAY_SECRET=your_razorpay_key_secret
-   PORT=4000
-   ```
-
-4. **Run the application**
-   ```bash
-   # Run both client and server
-   npm run dev
-   
-   # Or run separately
-   npm start              # Client only
-   npm run server         # Server only
-   ```
-
-5. **Access the application**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:4000
-
 ## 🔧 Configuration
 
 ### MongoDB Atlas Setup
@@ -179,6 +123,25 @@ studynotion/
 1. Enable 2-factor authentication on Gmail
 2. Generate an app password
 3. Use app password in MAIL_PASS
+
+## 🌐 Live Demo
+
+- **Backend API**: https://studynotion-backend-3zcb.onrender.com
+- **Frontend**: (Deploy to Netlify/Vercel for frontend)
+
+## 🚀 Deployment
+
+### Backend Deployment (Render)
+1. Connect your GitHub repository to Render
+2. Set environment variables in Render dashboard
+3. Deploy with build command: `npm install`
+4. Start command: `npm start`
+5. **Important**: Whitelist `0.0.0.0/0` in MongoDB Atlas Network Access
+
+### Frontend Deployment (Netlify/Vercel)
+1. Build the React app: `npm run build`
+2. Deploy the `build` folder
+3. Set environment variable: `REACT_APP_BASE_URL=https://studynotion-backend-3zcb.onrender.com/api/v1`
 
 ## 📱 Usage
 
@@ -210,7 +173,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**MYRA JAIS**
+**MYRA JAISWAL**
 - GitHub: [@MYRA31JAIS](https://github.com/MYRA31JAIS)
 
 ## 🙏 Acknowledgments
